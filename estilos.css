@@ -1,0 +1,112 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: Helvetica, sans-serif;
+}
+.contenedor .header,
+.contenedor .centro,
+.contenedor .info,
+.contenedor .footer{
+    padding: 20px;
+}
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "header header header header"
+                        "menu center center info"
+                      "footer footer footer footer";
+}
+
+.contenedor .header{
+    background: rgb(15, 15, 15);
+    color: white;
+    grid-area: header;
+    border-radius: 7px;
+    text-align: center;
+    font-family: 'Satisfy', cursive;
+    min-height: 60px;
+}
+.header h1:hover{
+color: rgb(255, 252, 238);
+zoom: 1.1;
+}
+.contenedor .menu{
+    grid-area: menu;
+    
+}
+.contenedor .centro{
+    grid-area: center;
+    background: rgba(114, 197, 212, 0.637) ;
+    border-radius: 7px;
+    min-height: 300px;
+}
+.contenedor .info{
+    grid-area: info;
+    background: rgba(114, 197, 212, 0.637) ;
+    border-radius: 7px;
+    padding: 30px;
+}
+
+
+.contenedor .footer{
+    background: rgb(15, 15, 15);
+    grid-area: footer;  
+    color: white;
+    border-radius: 7px;  
+    text-align: center;
+    justify-content: center;
+}
+.contenedor .menu ul{
+    list-style-type: none;
+}
+.menu li{
+    background-color: rgb(224, 209, 209);
+    padding: 10px;
+    color: rgb(44, 44, 44);
+    margin-bottom: 4px;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 10px;
+}
+.menu li:hover{
+    background-color:rgb(241, 224, 224) ;
+    color: rgb(37, 37, 37);
+}
+.redes {
+ display:inline-flex;
+ font-size: 30px;
+ }
+ .redes a{
+     color: #ffffff;
+     margin: 10px;
+     text-align: center;
+ }
+ .img1{
+     max-width: 100%;
+     max-height: 100%;
+ }
+
+@media screen and (max-width: 768px){
+    .contenedor{
+        grid-template-areas: "header header header header"
+                        "menu menu menu menu"
+                      "center center center info"
+                      "footer footer footer footer";
+    }
+}
+
+@media screen and (max-width: 512px){
+    .contenedor{
+        grid-template-areas: "header header header header"
+                        "menu menu menu menu"
+                      "center center center center"
+                      "info info info info"
+                      "footer footer footer footer";
+}}
